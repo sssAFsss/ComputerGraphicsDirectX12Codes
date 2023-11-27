@@ -26,8 +26,5 @@
     <ClInclude Include="d3dUtility.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="drawer.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
