@@ -1,0 +1,8 @@
+﻿  Human.cpp
+D:\University\Grafik\Homework5\Human\Human.cpp(41,32): warning C4305: 'argument': truncation from 'double' to 'FLOAT'
+D:\University\Grafik\Homework5\Human\Human.cpp(41,27): warning C4305: 'argument': truncation from 'double' to 'FLOAT'
+D:\University\Grafik\Homework5\Human\Human.cpp(45,32): warning C4305: 'argument': truncation from 'double' to 'FLOAT'
+D:\University\Grafik\Homework5\Human\Human.cpp(45,27): warning C4305: 'argument': truncation from 'double' to 'FLOAT'
+D:\University\Grafik\Homework5\Human\Human.cpp(46,32): warning C4305: 'argument': truncation from 'double' to 'FLOAT'
+D:\University\Grafik\Homework5\Human\Human.cpp(46,27): warning C4305: 'argument': truncation from 'double' to 'FLOAT'
+  Human.vcxproj -> D:\University\Grafik\Homework5\x64\Debug\Human.exe

@@ -23,8 +23,8 @@ IDirect3DDevice9* Device = 0;
 const int Width  = 1080;
 const int Height = 720;
  
-const int numOfObject = 10;
-ID3DXMesh* Objects[numOfObject] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+const int numOfObject = 16;
+ID3DXMesh* Objects[numOfObject] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 D3DXMATRIX  Worlds[numOfObject]; 
 D3DMATERIAL9 Mtrls[numOfObject];
 
@@ -48,6 +48,13 @@ bool Setup()
 	D3DXCreateBox(Device, 0.75, 4, 0.75, &Objects[7], 0); // پای چپ
 	D3DXCreateBox(Device, 0.75, 0.75, 1.5, &Objects[8], 0); // کفش راست
 	D3DXCreateBox(Device, 0.75, 0.75, 1.5, &Objects[9], 0); // کفش چپ
+	D3DXCreateBox(Device, 250, 0, 250, &Objects[10], 0); // آسمون
+	D3DXCreateBox(Device, 250, 0, 250, &Objects[11], 0); // زمین
+	D3DXCreateBox(Device, 250, 34, 0, &Objects[12], 0); // آسمون 1
+	D3DXCreateBox(Device, 250, 34, 0, &Objects[13], 0); // آسمون 2
+	D3DXCreateBox(Device, 0, 34,  250, &Objects[14], 0); // آسمون 3
+	D3DXCreateBox(Device, 0, 34,  250, &Objects[15], 0); // آسمون 4
+
 	
 
 	//
@@ -67,21 +74,33 @@ bool Setup()
 	D3DXMatrixTranslation(&Worlds[7],  -0.5f,  -1.8f, 0.0f);
 	D3DXMatrixTranslation(&Worlds[8],   0.5f,  -3.5f, -0.4f);
 	D3DXMatrixTranslation(&Worlds[9],  -0.5f,  -3.5f, -0.4f);
+	D3DXMatrixTranslation(&Worlds[10],  0.0f,  30.0f, 0.0f);
+	D3DXMatrixTranslation(&Worlds[11],  0.0f,  -3.9f, 0.0f);
+	D3DXMatrixTranslation(&Worlds[12],  0.0f,  13.0f, 125.0f);
+	D3DXMatrixTranslation(&Worlds[13],  0.0f,  13.0f, -125.0f);
+	D3DXMatrixTranslation(&Worlds[14],  125.0f,  13.0f, 0.0f);
+	D3DXMatrixTranslation(&Worlds[15], -125.0f,  13.0f, 0.0f);
 
 	//
 	// Setup the object's materials.
 	//
 
-	Mtrls[0] = d3d::BLUE_MTRL;
-	Mtrls[1] = d3d::BLUE_MTRL;
-	Mtrls[2] = d3d::BLUE_MTRL;
-	Mtrls[3] = d3d::BLUE_MTRL;
-	Mtrls[4] = d3d::BLUE_MTRL;
-	Mtrls[5] = d3d::BLUE_MTRL;
-	Mtrls[6] = d3d::BLUE_MTRL;
-	Mtrls[7] = d3d::BLUE_MTRL;
-	Mtrls[8] = d3d::BLUE_MTRL;
-	Mtrls[9] = d3d::BLUE_MTRL;
+	Mtrls[0] = d3d::YELLOW_MTRL;
+	Mtrls[1] = d3d::YELLOW_MTRL;
+	Mtrls[2] = d3d::YELLOW_MTRL;
+	Mtrls[3] = d3d::YELLOW_MTRL;
+	Mtrls[4] = d3d::YELLOW_MTRL;
+	Mtrls[5] = d3d::YELLOW_MTRL;
+	Mtrls[6] = d3d::YELLOW_MTRL;
+	Mtrls[7] = d3d::YELLOW_MTRL;
+	Mtrls[8] = d3d::YELLOW_MTRL;
+	Mtrls[9] = d3d::YELLOW_MTRL;
+	Mtrls[10] = d3d::BLUE_MTRL;
+	Mtrls[11] = d3d::GREEN_MTRL;
+	Mtrls[12] = d3d::BLUE_MTRL;
+	Mtrls[13] = d3d::BLUE_MTRL;
+	Mtrls[14] = d3d::BLUE_MTRL;
+	Mtrls[15] = d3d::BLUE_MTRL;
 
 	//
 	// Setup a directional light.
